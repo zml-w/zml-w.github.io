@@ -1,0 +1,386 @@
+.about-page {
+  padding: 20px 0;
+}
+
+.about-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.about-content {
+  flex: 1;
+  max-width: 800px;
+}
+
+/* 随机图片 - 固定定位悬浮 */
+.random-image-container {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 280px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.random-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 响应式 - 小屏幕隐藏 */
+@media (max-width: 1200px) {
+  .random-image-container {
+    display: none;
+  }
+}
+
+.about-section {
+  margin-bottom: 32px;
+}
+
+.about-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-section p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* 技术栈 */
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.tech-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tech-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 功能列表 */
+.feature-list,
+.data-source-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-list li,
+.data-source-list li {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.feature-list li::before,
+.data-source-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+}
+
+.feature-list strong,
+.data-source-list strong {
+  color: #fff;
+}
+
+/* 未来计划折叠 */
+.plan-section {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.plan-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  transition: background 0.3s ease;
+}
+
+.plan-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.plan-toggle h2 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* 未来计划列表 */
+.plan-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px 20px;
+  margin: 0;
+}
+
+.plan-item {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.plan-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.plan-item.completed {
+  background: rgba(76, 175, 80, 0.05);
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.plan-header strong {
+  color: #fff;
+  font-size: 15px;
+}
+
+.plan-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.plan-status.pending {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.plan-status.completed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.plan-desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.plan-date {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.data-note {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 3px solid #ffc107;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 更新日志折叠 */
+.changelog-section {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.changelog-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  transition: background 0.3s ease;
+}
+
+.changelog-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.changelog-toggle h2 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* 更新日志列表 */
+.changelog-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 20px 20px;
+  margin: 0;
+}
+
+.changelog-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.changelog-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  transition: background 0.3s ease;
+}
+
+.changelog-header:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.changelog-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.changelog-date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.changelog-version {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.changelog-content {
+  padding: 0 16px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.changelog-content ul {
+  list-style: none;
+  padding: 12px 0 0 8px;
+  margin: 0;
+}
+
+.changelog-content li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+.changelog-content li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+}
+
+.changelog-content li:last-child {
+  margin-bottom: 0;
+}
+
+/* 更新日志预览（折叠状态） */
+.changelog-preview {
+  padding: 12px 20px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.changelog-preview-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* 联系方式 */
+
+/* 联系方式 */
+.contact-links {
+  display: flex;
+  gap: 12px;
+}
+
+.contact-link img {
+  transition: transform 0.3s;
+}
+
+.contact-link:hover img {
+  transform: translateY(-2px);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .tech-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .changelog-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
