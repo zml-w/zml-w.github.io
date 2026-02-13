@@ -212,7 +212,7 @@ function Avatar() {
   const [avatarSrc, setAvatarSrc] = useState('')
 
   useEffect(() => {
-    const extensions = ['webp', 'png', 'jpg', 'jpeg']
+    const extensions = ['png', 'jpg', 'jpeg', 'webp']
     const tryLoadAvatar = async () => {
       for (const ext of extensions) {
         try {
