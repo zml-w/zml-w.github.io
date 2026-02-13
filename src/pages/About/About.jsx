@@ -5,8 +5,8 @@ import './About.css'
 // 随机图片组件
 function RandomImage() {
   const images = useMemo(() => [
-    '/src/pages/About/image/雾雨魔理沙.png',
-    '/src/pages/About/image/博丽灵梦.png'
+    '/image/雾雨魔理沙.png',
+    '/image/博丽灵梦.png'
   ], [])
 
   const [randomImage, setRandomImage] = useState('')
