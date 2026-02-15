@@ -143,15 +143,102 @@
   color: #fff;
 }
 
-/* 响应式 */
-@media (max-width: 480px) {
-  .snake-board {
-    width: 320px;
-    height: 320px;
+/* 响应式 - 手机 */
+@media (max-width: 768px) {
+  .snake-game {
+    gap: 16px;
   }
 
   .snake-game-header {
     flex-direction: column;
     gap: 12px;
+    max-width: 350px;
+  }
+
+  .snake-game-scores {
+    gap: 8px;
+  }
+
+  .score-box {
+    padding: 6px 12px;
+    min-width: 70px;
+  }
+
+  .score-label {
+    font-size: 10px;
+  }
+
+  .score-value {
+    font-size: 16px;
+  }
+
+  .snake-board {
+    width: 350px;
+    height: 350px;
+    padding: 6px;
+  }
+
+  .snake-message h2 {
+    font-size: 24px;
+  }
+
+  .snake-message p {
+    font-size: 14px;
+  }
+
+  .snake-instructions {
+    font-size: 12px;
+  }
+}
+
+/* 响应式 - 小屏手机 */
+@media (max-width: 480px) {
+  .snake-game-header {
+    max-width: 300px;
+  }
+
+  .snake-board {
+    width: 300px;
+    height: 300px;
+    padding: 4px;
+  }
+
+  .score-box {
+    padding: 6px 10px;
+    min-width: 60px;
+  }
+
+  .score-value {
+    font-size: 14px;
+  }
+
+  .snake-message {
+    padding: 20px;
+  }
+
+  .snake-message h2 {
+    font-size: 20px;
+  }
+
+  .snake-message p {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .snake-instructions {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}
+
+/* 响应式 - 超小屏手机 */
+@media (max-width: 360px) {
+  .snake-game-header {
+    max-width: 280px;
+  }
+
+  .snake-board {
+    width: 280px;
+    height: 280px;
   }
 }

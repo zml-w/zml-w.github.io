@@ -96,17 +96,127 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* 响应式 */
+/* 响应式 - 平板 */
 @media (max-width: 1024px) {
   .games-container {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .games-nav {
     order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 12px;
+  }
+
+  .game-category-nav {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 0;
+  }
+
+  .game-category-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .game-nav-link {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
   }
 
   .game-content {
     order: 1;
+    min-height: 400px;
+    padding: 20px;
+  }
+}
+
+/* 响应式 - 手机 */
+@media (max-width: 768px) {
+  .games-page {
+    padding: 12px 0;
+  }
+
+  .games-container {
+    gap: 12px;
+  }
+
+  .games-nav {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .game-category-nav {
+    min-width: 100%;
+  }
+
+  .game-category-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .game-category-items {
+    gap: 6px;
+  }
+
+  .game-nav-link {
+    padding: 10px 12px;
+    font-size: 13px;
+    min-width: calc(50% - 3px);
+  }
+
+  .game-nav-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .game-content {
+    padding: 16px;
+    min-height: 350px;
+  }
+
+  .game-placeholder h2 {
+    font-size: 22px;
+  }
+
+  .game-placeholder p {
+    font-size: 14px;
+  }
+}
+
+/* 响应式 - 小屏手机 */
+@media (max-width: 480px) {
+  .games-nav {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .game-nav-link {
+    padding: 8px 10px;
+    font-size: 12px;
+    min-width: calc(50% - 3px);
+  }
+
+  .game-nav-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .game-content {
+    padding: 12px;
+    min-height: 300px;
+  }
+
+  .game-placeholder h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .game-placeholder p {
+    font-size: 13px;
   }
 }

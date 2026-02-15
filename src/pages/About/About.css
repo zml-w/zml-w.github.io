@@ -372,15 +372,192 @@
   transform: translateY(-2px);
 }
 
-/* 响应式 */
-@media (max-width: 768px) {
+/* 响应式 - 平板 */
+@media (max-width: 1024px) {
+  .about-layout {
+    gap: 24px;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
   .tech-stack {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* 响应式 - 手机 */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 12px 0;
+  }
+
+  .about-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-section {
+    margin-bottom: 24px;
+  }
+
+  .about-section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+  }
+
+  .about-section p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .tech-stack {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .tech-item {
+    padding: 12px;
+  }
+
+  .tech-name {
+    font-size: 14px;
+  }
+
+  .tech-desc {
+    font-size: 12px;
+  }
+
+  .feature-list,
+  .data-source-list {
+    gap: 10px;
+  }
+
+  .feature-list li,
+  .data-source-list li {
+    font-size: 13px;
+    padding-left: 16px;
+  }
+
+  .plan-toggle,
+  .changelog-toggle {
+    padding: 14px 16px;
+  }
+
+  .plan-toggle h2,
+  .changelog-toggle h2 {
+    font-size: 16px;
+  }
+
+  .plan-list {
+    gap: 12px;
+    padding: 12px 16px 16px;
+  }
+
+  .plan-item {
+    padding: 12px;
+  }
+
+  .plan-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .plan-header strong {
+    font-size: 14px;
+  }
+
+  .plan-desc {
+    font-size: 12px;
+  }
+
+  .changelog-list {
+    gap: 10px;
+    padding: 12px 16px 16px;
   }
 
   .changelog-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
+  }
+
+  .changelog-header {
+    padding: 12px;
+  }
+
+  .changelog-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .changelog-date {
+    font-size: 11px;
+  }
+
+  .changelog-version {
+    font-size: 13px;
+  }
+
+  .changelog-content {
+    padding: 0 12px 12px;
+  }
+
+  .changelog-content li {
+    font-size: 12px;
+    padding-left: 12px;
+  }
+
+  .data-note {
+    margin-top: 12px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .contact-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* 响应式 - 小屏手机 */
+@media (max-width: 480px) {
+  .about-section h2 {
+    font-size: 16px;
+  }
+
+  .tech-stack {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .tech-item {
+    padding: 10px;
+  }
+
+  .tech-name {
+    font-size: 13px;
+  }
+
+  .tech-desc {
+    font-size: 11px;
+  }
+
+  .plan-toggle h2,
+  .changelog-toggle h2 {
+    font-size: 15px;
+  }
+
+  .changelog-preview {
+    padding: 10px 16px 12px;
+  }
+
+  .changelog-preview-item {
+    padding: 8px 12px;
   }
 }

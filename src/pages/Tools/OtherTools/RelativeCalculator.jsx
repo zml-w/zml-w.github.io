@@ -82,8 +82,6 @@ function RelativeCalculator() {
     'mother mother mother': '太外婆',
     
     // 兄弟姐妹及配偶
-    'brother': '哥哥/弟弟',
-    'sister': '姐姐/妹妹',
     'brother wife': '嫂子/弟媳',
     'sister husband': '姐夫/妹夫',
     
@@ -108,8 +106,6 @@ function RelativeCalculator() {
     'mother mother sister': '姨外婆',
     
     // 子女及配偶
-    'son': '儿子',
-    'daughter': '女儿',
     'son wife': '儿媳',
     'daughter husband': '女婿',
     
