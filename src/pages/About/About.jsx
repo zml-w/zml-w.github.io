@@ -124,6 +124,14 @@ function About() {
                 <div className="plan-desc">定时爬取新闻或其他数据信息</div>
                 <div className="plan-date">创建日期：2026-02-09</div>
               </li>
+              <li className="plan-item">
+                <div className="plan-header">
+                  <strong>FC游戏</strong>
+                  <span className="plan-status pending">待开发</span>
+                </div>
+                <div className="plan-desc">在线游玩各种FC小游戏，如超级玛丽、热血格斗、忍者神龟等</div>
+                <div className="plan-date">创建日期：2026-02-15</div>
+              </li>
             </ul>
           )}
         </section>
