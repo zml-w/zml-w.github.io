@@ -16,6 +16,7 @@
     "html-to-image": "^1.11.13",
     "jszip": "^3.10.1",
     "lucide-react": "^0.460.0",
+    "lunar-javascript": "^1.7.7",
     "markmap-lib": "^0.18.12",
     "markmap-view": "^0.18.12",
     "omggif": "^1.0.10",

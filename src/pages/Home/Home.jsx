@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { Download, Globe, Wrench, Gamepad } from 'lucide-react'
+import { Lunar, Solar } from 'lunar-javascript'
 import './Home.css'
 
 // 天气画布组件
@@ -267,9 +268,35 @@ function DateTime() {
     return `${hours}:${minutes}:${seconds}`
   }
 
+  // 获取农历信息
+  const solar = Solar.fromDate(dateTime)
+  const lunar = solar.getLunar()
+  const lunarStr = lunar.getMonthInChinese() + '月' + lunar.getDayInChinese()
+  const ganZhi = lunar.getYearInGanZhi() + '年 (' + lunar.getYearShengXiao() + '年)'
+
+  // 获取节日（包括公历和农历）
+  let festival = null
+  const solarFestivals = solar.getFestivals()
+  const lunarFestivals = lunar.getFestivals()
+  if (solarFestivals.length > 0) {
+    festival = solarFestivals[0]
+  } else if (lunarFestivals.length > 0) {
+    festival = lunarFestivals[0]
+  } else {
+    const jieQi = lunar.getJieQi()
+    if (jieQi) {
+      festival = jieQi
+    }
+  }
+
   return (
     <div className="datetime-display">
       <div className="date">{formatDate(dateTime)}</div>
+      <div className="lunar-info">
+        <span className="lunar-date">{lunarStr}</span>
+        <span className="lunar-year">{ganZhi}</span>
+        {festival && <span className="festival">{festival}</span>}
+      </div>
       <div className="time">{formatTime(dateTime)}</div>
       <div className="timezone">北京时间</div>
       <CountdownDays />
